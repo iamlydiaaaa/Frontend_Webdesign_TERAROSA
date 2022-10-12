@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main_header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/museum.css">
+    <title>이젠(리뉴얼)_포트폴리오</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon2.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript/jquery-3.6.0.min.js"></script>
+    <script src="javascript/prefixfree.min.js"></script>
+    <script src="javascript/museum.js"></script>
+    <script src="javascript/jquery.mousewheel.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //nav 클릭 기능            
+            $('.museum_list li').on('click', function(e) {
+                e.preventDefault();
+                var num = $(this).index();
+                $('.museum_list li').removeClass('museum_list_on');
+                $(this).addClass('museum_list_on');
+
+                scrollNum = $('section').eq(num).offset().top;
+                $('html,body').stop().animate({
+                    scrollTop: scrollNum
+                }, 1000)
+            })
+
+            $("html,body").on("mousewheel", function(event, delta) {
+                var con = $(".museum_txt>section", this);
+                if (delta < 0) {
+                    $('html,body').stop().animate({
+                        scrollTop: $("html,body").scrollTop() + 960
+                    }, 1300)
+                } else if (delta > 0) {
+                    if ($("html,body").scrollTop() >= 3876) {
+                        $('html,body').stop().animate({
+                            scrollTop: $("html,body").scrollTop() - 400
+                        }, 1300)
+                    } else {
+                        $('html,body').stop().animate({
+                            scrollTop: $("html,body").scrollTop() - 960
+                        }, 1300)
+                    }
+
+                }
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <script src="common/header_main.js"></script>
+        <div id="sc"></div>
+        <main id="museum">
+            <div id="museum_wrap">
+                <div>
+                    <ul class="museum_list">
+                        <li class="museum_list_on"><a href="#">01.</a></li>
+                        <li><a href="#">02.</a></li>
+                        <li><a href="#">03.</a></li>
+                        <li><a href="#">04.</a></li>
+                    </ul>
+                    <div class="museum_txt">
+                        <section class="museum_txt_on">
+                            <p>
+                                테라로사 뮤지엄은<br>
+                                우리가 한 잔의 커피를<br>
+                                마시기까지 전 과정을<br>
+                                볼 수 있는 박물관입니다.
+                            </p>
+                        </section>
+                        <section>
+                            <p>
+                                지구 반대편 커피 생산지에서 시작되는 커피의 여정을<br>
+                                영상과 회화로 실감나게 전달하고 역사적, 사회적, 문화적 관점에서<br>
+                                커피의 다양한 면모를 여러 예술가들과의 협업으로<br>
+                                흥미롭게 구성하였습니다.
+                            </p>
+                        </section>
+                        <section>
+                            <p>
+                                테라로사가 오랫동안 수집한 앤티크 로스터기와 <br>
+                                소장품도 곳곳에서 만날 수 있습니다.
+                            </p>
+                        </section>
+                        <section class="museum_table_wrap">
+                            <div>
+                                <table class="museum_table">
+                                    <tr>
+                                        <th>관람시간</th>
+                                        <td><strong>10:00~17:00</strong><br>매 정시에 가이드 투어로 진행<br>관람에는 커피 테이스팅이 포함</td>
+                                    </tr>
+                                    <tr>
+                                        <th>티켓</th>
+                                        <td>온라인 예약 또는 현장 접수</td>
+                                    </tr>
+                                    <tr>
+                                        <th>관람가</th>
+                                        <td>
+                                            <ul class="museum_table_price">
+                                                <li><span>일반</span><strong>12,000원</strong></li>
+                                                <li><span>어린이 (36개월 이상~초등학생)</span><strong>8,000원</strong></li>
+                                                <li><span>단체 (15인 이상)</span><strong>10,000원</strong></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="museum_table_right">
+                                    <p>
+                                        <strong>예약 문의</strong>
+                                        <span>010-0000-1234 (9:30 - 17:30)</span>
+                                    </p>
+                                    <p id="museum_go"><button type="button">관람 신청하기</button></p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <!--        FOOTER 불러오기 -->
+        <script src="common/footer.js"></script>
+        <!--        FOOTER 불러오기 끝-->
+    </div>
+</body></html>

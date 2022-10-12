@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+
+/*------------------------------------------*/
+
+/*museum*/
+#museum {
+}
+#sc{
+    position: fixed;
+    right: 50px;top: 50px;
+    font-size: 100px;
+    color: #000;   
+    background-color: #fff;
+}
+
+#museum_wrap {
+    width: 100%;
+    height: auto;
+}
+
+#museum_wrap::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1000px;
+    background: url(../images/museum01.jpg) no-repeat center center;
+    background-size: cover;
+/*    background-attachment: fixed;*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    filter: brightness(60%) contrast(80%);
+}
+
+/*------------------------------------------*/
+
+#museum > #museum_wrap > div {
+    position: relative;
+    margin: 0 auto;
+/*    padding-top: 150px;*/
+}
+
+.museum_list {
+    position: fixed;
+    left: 250px;
+    top: 180px;
+    z-index: 100;
+}
+
+
+.museum_list li {
+    float: left;
+    color: #fff;
+}
+
+.museum_list a {
+    display: block;
+    padding: 5px 15px; 
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.museum_list .museum_list_on {
+    color: #e04032;
+    text-shadow: 0 0 5px rgba(26, 26, 26, 0.1);
+}
+
+
+
+/*------------------------------------------*/
+
+
+
+.museum_txt {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    transform: translateY(20px);
+    opacity: 0;
+}
+.display1{
+    transition: all 3s;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+.museum_txt::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+}
+
+.museum_txt > section {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.museum_txt > section > p {
+    font-size: 38px;
+    text-align: center;
+    line-height: 1.5em;
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.museum_txt .museum_txt_on {}
+
+
+
+/*테이블*/
+.museum_table_wrap {
+    position: relative;
+    width: 100%;
+}
+.museum_table_wrap>div{
+    width: 70%;
+    position: absolute;
+    left: 50%; top: 50%;
+    padding-top: 100px;
+    transform: translate(-50%,-50%);
+}
+
+.museum_table {
+    width: 60%;
+    float: left;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.museum_table tr {
+    height: 150px;
+}
+
+.museum_table th {
+    width: 200px;
+    font-weight: bold;
+    font-size: 20px;
+    border-top: 3px solid #fff;
+    padding-top: 20px;
+}
+
+.museum_table td {
+    padding-left: 50px;
+}
+
+.museum_table td > strong {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+}
+
+.museum_table_price {
+    width: 310px;
+}
+
+.museum_table_price li {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.museum_table_price span {
+    display: inline-block;
+    width: 220px;
+}
+
+.museum_table_price strong {
+    font-weight: bold;
+    text-align: right;
+    float: right;
+}
+
+
+/*------------------------------------------*/
+
+.museum_table_right {
+    float: left;
+    width: 35%;
+    text-align: left;
+}
+
+.museum_table_right p {
+    margin-bottom: 100px;
+}
+
+.museum_table_right p strong {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    font-size: 28px;
+    border-top: 3px solid #fff;
+    padding-top: 20px;
+    margin-right: 50px;
+}
+
+/*------------------------------------------*/
+
+
+#museum_go {
+    width: 400px;
+    height: 50px;
+}
+
+#museum_go button {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    color: #fff;
+    background-color: #ae3333;
+    line-height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;500;700;900&display=swap');
+
+#sub_header{
+    width: 100%; height: 80px; position: fixed;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+#sub_header>div{
+    width: 1200px; height: 80px; margin: 0 auto;
+}
+
+/*-------------------*/
+#sub_logo{float: left; height: 80px;}
+#sub_logo a{font:900 40px 'Exo', sans-serif; transition: all 0.2s; line-height: 80px; height: 80px; display: block;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    background: -webkit-linear-gradient(333deg, rgba(50,47,47,1) 0%, rgba(88,88,88,1) 35%, rgba(47,47,47,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#sub_logo a:hover{
+    background: -webkit-linear-gradient(333deg, rgba(237,49,47,1) 0%, rgba(233,82,81,1) 35%, rgba(255,143,99,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/*-------------------*/
+
+#sub_gnb{float: right;}
+
+.sub_gnb_list{float: left; margin-right: 70px;}
+.sub_gnb_list li{float: left; position: relative;}
+
+
+.sub_gnb_list a{padding: 0 30px; display: block; height: 80px; line-height: 80px; position: relative;transition: all 0.2s;
+    
+}
+.sub_gnb_list a::after{
+    content: ""; display: block; width: 0%; height: 4px;
+    background-color: #ed312f;
+    position: absolute; left: 50%; bottom: 0px;
+    transform: translateX(-50%);
+    transition: all 0.2s;
+
+}
+
+.sub_gnb_list li:hover a::after{width: 60%;}
+.sub_gnb_list li:hover a{color: #ed312f;}
+
+/*-------------------*/
+
+.sub_account_wrap{float: right;}
+.sub_account_wrap>a{}
+.sub_account_wrap>a i{}
+.sub_account_wrap>a span{}
+
+/*-------------------*/
+
+.menu_account{height: 80px; line-height: 80px;}
+.menu_account li{float: left; margin: 0 8px; transition: all 0.3s;}
+.menu_account li:hover i{color: #ed312f;}
+.menu_account a{}
+/*아이콘*/
+.menu_account i{font-size: 20px;}
+.menu_account span{display: none;}
+
+/*-----------*/
+.header_clear{width: 100%; height: 80px;}

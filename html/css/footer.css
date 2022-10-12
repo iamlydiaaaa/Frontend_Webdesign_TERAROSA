@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;500;700;900&display=swap');
+
+
+body{font:normal 15px/1.5em 'Noto Sans KR', sans-serif;}
+
+
+
+
+/*------------------------------------------*/
+/*    FOOTER    */
+footer{width: 100%;height: 250px; overflow: hidden; display: table; background-color: #333; padding: 40px 0; color: #9f9f9f; letter-spacing: -1px;}
+
+.ft_wrap{width: 1080px;height: 250px; margin: 0 auto;}
+#ft_logo{font:900 40px 'Exo', sans-serif; float: left;}
+
+.ft_inner{float: left; width: 550px;margin-left: 55px;}
+
+#main .ft_link{width: 100%; height: 20px;line-height: 20px; color: #fff;}
+.ft_link li{float: left; font-weight: bold;}
+.ft_link li+li{margin-left: 20px;}
+
+.cname{margin: 30px 0;}
+.cname span{font-weight: bold; margin-right: 10px;}
+
+.ft_info p{line-height: 30px;}
+.ft_info strong{opacity: 0.6;}
+.ft_info strong+strong::before{content: "│"; }
+
+.ft_cs{width: 250px; float: right;}
+.cs_tit{font-size: 18px;}
+.cs_call{font-size: 24px; color: #fff; margin: 20px 0;}
+
+.cs_time{width: 100%;height: 90px;}
+.cs_time>div{width: 100%; height: 20px; margin-bottom: 10px;}
+.cs_time span{display: inline-block; float: left;}
+.cs_time>div>span+span{margin-left: 20px;}
+
+.cs_faq{height: 20px; margin-bottom: 20px;}
+.cs_faq li{float: left; color: #fff; font-weight: bold;}
+.cs_faq li+li{margin-left: 15px;}
+.cs_faq li:hover{text-decoration: underline;}
+
+.ft_sns{}
+.ft_sns p{display: inline-block;}
+.ft_sns p+p{margin-left: 20px;}
+.ft_sns p:hover{color: #fff;}
+
+#ft_copy{clear: both; margin-top: 20px;}
+
+

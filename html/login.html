@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테라로사 로그인</title>
+    <script src="javascript/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            //아이디/비밀번호에 포커스하면 텍스트 효과
+            $(".u_txt input").focus(function() {
+                $(this).siblings("label").addClass("focus");
+            }).blur(function() {
+                if ($(this).val() == "") {
+                    $(this).siblings("label").removeClass("focus");
+                } else {
+                    $(this).siblings("label").addClass("focus");
+                }
+            })
+
+
+            //아이디저장, 로그인상태 유지
+            $("#chk1,#chk2").change(function() {
+                var chk1 = $("#chk1").prop("checked");
+                var chk2 = $("#chk2").prop("checked");
+
+                if (chk1) {
+                    $(".type02").addClass("checked");
+                } else {
+                    $(".type02").removeClass("checked");
+                }
+
+                if (chk2) {
+                    $(".type03").addClass("checked");
+                } else {
+                    $(".type03").removeClass("checked");
+                }
+            })
+
+        })
+    </script>
+    <!-- ------------------------------------------- -->
+    <link rel="stylesheet" href="css/sub_header.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+<!-- ------------------------------------------- -->
+
+<body>
+    <div id="wrap">
+        <script src="common/header_sub.js"></script>
+        <main id="main">
+            <div id="login_bg">
+
+            </div>
+
+            <div id="login">
+                <div id="top_wrap">
+                    <h1><a href="#"><img src="images/logo.png" alt=""></a></h1>
+                </div>
+
+                <div id="login_con">
+                    <div id="login1" class="login_box">
+                        <form action="#" method="post">
+                            <p class="u_txt"><label for="u_id" class="u_id_txt">아이디</label><input type="text" id="u_id" autocomplete="off"></p>
+                            <p class="u_txt"><label for="u_id">비밀번호</label><input type="password" id="u_pwd" autocomplete="off"></p>
+                            <p id="chk_wrap1">
+                                <input type="checkbox" name="chk" id="chk1" value="1">
+                                <label for="chk1" class="type01 type02">아이디 저장</label>
+                                <input type="checkbox" name="chk" id="chk2" value="2">
+                                <label for="chk2" class="type01 type03">로그인 상태 유지</label>
+                            </p>
+                            <p id="btn_wrap1">
+                                <input type="button" id="s_btn1" class="s_btn" value="로그인">
+                            </p><!-- btn_wrap1 -->
+
+                            <p class="login_account">
+                                <a href="#" class="search1">아이디/비밀번호 찾기</a>
+                                <a href="join.html" class="join1">회원가입</a>
+                            </p>
+                        </form>
+                    </div><!-- 회원로그인, login1 -->
+                </div><!-- login_con -->
+            </div>
+        </main>
+        <!--        FOOTER 불러오기 -->
+        <script src="common/footer.js"></script>
+        <!--        FOOTER 불러오기 끝-->
+    </div>
+
+</body></html>
